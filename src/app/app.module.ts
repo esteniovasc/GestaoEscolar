@@ -1,16 +1,32 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { ButtonModule } from 'primeng/button';
+import { MessagesModule } from 'primeng/messages'; 
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations'; 
+import { InputTextModule } from 'primeng/inputtext';
+import { PasswordModule } from 'primeng/password';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { TelaLoginComponent } from './tela-login/tela-login.component';
+import { TelaInicialComponent } from './tela-inicial/tela-inicial.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    TelaLoginComponent,
+    TelaInicialComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    ButtonModule,
+    MessagesModule,
+    BrowserAnimationsModule,
+    FormsModule,
+    InputTextModule,
+    PasswordModule
   ],
   providers: [],
   bootstrap: [AppComponent]
