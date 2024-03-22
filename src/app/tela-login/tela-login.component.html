@@ -1,15 +1,33 @@
-<div class="card flex justify-content-center">
-    <span class="p-float-label">
-        <input pInputText id="username" [(ngModel)]="value" />
-        <label for="username">Username</label>
-    </span>
-  </div>
+<header class="header">
 
-<div class="card flex justify-content-center">
-    <p-password [(ngModel)]="password" [toggleMask]="true"></p-password>
-</div>
+    <h3>Área de Login</h3>   
 
-<div class="card flex justify-content-center">
-    <p-button label="Esqueceu a senha?" [text]="true" [raised]="true" severity="warning"></p-button>
-    <button pButton pRipple label="Entrar" class="p-button-success"></button>
+    <a routerLink="/tela-inicial" class="card flex justify-content-center">
+        <p-button label="Home" [raised]="true"></p-button>
+    </a>
+
+</header>
+
+<div class="container">
+    
+    <p-button icon="pi pi-user" [rounded]="true" [text]="true" [raised]="true" severity="info "></p-button>
+
+    <div class="card flex justify-content-center">
+        <span class="p-float-label">
+            <input pInputText id="username" [(ngModel)]="username" />
+            <label for="username">Usuário</label>
+        </span>
+    </div>
+    
+    <div class="card flex justify-content-center">
+        <span class="p-float-label">
+            <p-password [(ngModel)]="password" [feedback]="false"></p-password>
+            <label for="password">Senha</label>
+        </span>
+    </div>
+    
+    <div class="card flex justify-content-center botao">
+        <p-button class="botao" label="Esqueceu a senha?" [raised]="true" severity="warning"></p-button>
+        <p-button class="botao" label="Entrar" [raised]="true" ></p-button>
+    </div>
 </div>

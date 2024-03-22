@@ -1,0 +1,25 @@
+
+.header {
+    background: rgb(28, 124, 49);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: 25px;
+    color: white;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(187, 222, 199);
+    height: 500px;
+    gap: 25px;
+}
+
+.botao {
+    margin-right: 5px;
+    margin-left: 5px;
+}

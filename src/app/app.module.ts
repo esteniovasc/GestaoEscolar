@@ -11,6 +11,7 @@ import { AppComponent } from './app.component';
 import { TelaLoginComponent } from './tela-login/tela-login.component';
 import { TelaInicialComponent } from './tela-inicial/tela-inicial.component';
 import { FormsModule } from '@angular/forms';
+import { RouterModule } from '@angular/router';
 
 @NgModule({
   declarations: [
@@ -26,9 +27,14 @@ import { FormsModule } from '@angular/forms';
     BrowserAnimationsModule,
     FormsModule,
     InputTextModule,
-    PasswordModule
+    PasswordModule,
+    RouterModule.forRoot([
+      {path: '', component: TelaLoginComponent},
+      {path: 'tela-inicial', component: TelaInicialComponent}
+    ])
   ],
   providers: [],
   bootstrap: [AppComponent]
 })
+
 export class AppModule { }

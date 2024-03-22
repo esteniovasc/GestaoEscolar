@@ -6,6 +6,6 @@ import { Component } from '@angular/core';
   styleUrl: './tela-login.component.css'
 })
 export class TelaLoginComponent {
-  value: string | undefined;
+  username: string | undefined;
   password!: string;
 }
