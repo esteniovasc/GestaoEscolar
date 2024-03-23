@@ -5,6 +5,9 @@ import { Component } from '@angular/core';
   templateUrl: './tela-inicial.component.html',
   styleUrl: './tela-inicial.component.css'
 })
-export class TelaInicialComponent {
 
+export class TelaInicialComponent {
+  
+  email : string | undefined;
+  celular : string | undefined;
 }

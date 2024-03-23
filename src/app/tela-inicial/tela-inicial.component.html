@@ -1,1 +1,97 @@
-<p>tela-inicial works!</p>
+    <header class="header">
+
+        <img scr="/src/logo.png" alt="Logo">
+        <h3>Gestão Escolar</h3>
+    
+        <nav>
+            <ul class="menu">
+                <li><a href="/">Login</a></li>
+                <li><a href="/">Sobre</a></li>
+            </ul>
+        </nav>
+    
+    </header>
+    
+        <section class="section">
+            <h3>Praticidade, automação e segurança.</h3>
+            <h4>As principais características da última
+                versão da nossa solução para gestão escolar.
+            </h4>
+            <img src="/src/assets/img/interface.jpg" alt="Interface do Website de Gerenciamento">
+        </section>
+        
+    
+    <p-divider></p-divider>
+    
+        <section class="section">
+            <h3>Veja como o Gestão Escolar otimiza o fluxo de trabalho</h3>
+            <h4>Com o recurso Gerar Documentos, o secretário escolar
+                pode criar em menos de um minuto, uma declaração que
+                comprove que o Aluno está matriculado no 6º ano neste ano letivo.
+            </h4>
+        </section>
+    
+    <p-divider></p-divider>
+    
+        <section class="section">
+            <h3>Realize um período de teste de 30 dias e se o GE não contribuir significamente
+                com o ambiente escolar, devolvemos o seu investimento.
+            </h3>
+            <h4>Preencha os dados abaixo para que um consultor entre em contato:</h4>
+    
+            <div class="dados">
+                <p-floatLabel>
+                    <input id="email" type="text" pInputText [(ngModel)]="email" />
+                    <label for="email">E-mail</label>
+                </p-floatLabel>
+        
+                <p-floatLabel>
+                    <p-inputMask mask="(99) 99999-9999" [(ngModel)]="celular" placeholder="(99) 99999-9999"></p-inputMask>
+                    <label for="celular">Contato</label>
+                </p-floatLabel>
+            </div>
+
+            <p-button class="botao" label="Solicitar análise"></p-button>
+        </section>
+    
+    <p-divider></p-divider>
+    
+    <footer>
+    
+        <div class="footer">
+            <h6>
+                Copyright© 2001-2024 FESV solutions. Todos os direitos reservados.
+                FESV SOLUCOES DO BRASIL LTDA. inscrita no CNPJ/MF sob o nº. 00.000.000/0001-10.
+                <br>
+                <br>
+                Esse website é melhor visualizado nas versões Microsoft Internet Explorer 11 ou superior e/ou nas últimas versões dos navegadores Google Chrome e Mozilla Firefox.
+                <br>
+                <br>
+                Formas de pagamento aceitas: Pix, Cartão de crédito e Débito (Bandeiras: Visa, MasterCard, Elo, American Express, Diners Club, Hipercard, Elo) e Boleto bancário.
+            </h6>
+    
+            <h4>
+                Precisa de ajuda?
+                <h5>
+                    Entre em contato:
+                </h5>
+            </h4>
+            
+        </div>
+        
+        <p-divider></p-divider>
+    
+        <div class="footer">
+            <h6 class="separador">
+                <a class="separador" routerLink="/tela-inicial">Política de Privacidade</a>
+                <a class="separador" routerLink="/tela-inicial">Política de vendas</a>
+                <a class="separador" routerLink="/tela-inicial">Avisos legais</a>
+                <a class="separador" routerLink="/tela-inicial">Mapa do Site</a>
+            </h6>
+    
+            <h5>
+                Nossas redes sociais:
+            </h5>
+        </div>
+    
+    </footer>
