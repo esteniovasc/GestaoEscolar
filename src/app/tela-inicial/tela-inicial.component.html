@@ -1,11 +1,14 @@
     <header class="header">
 
-        <img scr="/src/logo.png" alt="Logo">
-        <h3>Gestão Escolar</h3>
+        <div class="espacamento">
+            <img src="../../assets/img/logo.svg" width="50px" height="50px" alt="Logo">
+            <h3>Gestão Escolar</h3>   
+        </div>
+        
     
         <nav>
             <ul class="menu">
-                <li><a href="/">Login</a></li>
+                <li><a href="/tela-login">Login</a></li>
                 <li><a href="/">Sobre</a></li>
             </ul>
         </nav>
@@ -17,21 +20,30 @@
             <h4>As principais características da última
                 versão da nossa solução para gestão escolar.
             </h4>
-            <img src="/src/assets/img/interface.jpg" alt="Interface do Website de Gerenciamento">
+            <img class="imagens" src="../../assets/img/interface.svg" width="60%" alt="Interface do Website de Gerenciamento">
         </section>
         
     
-    <p-divider></p-divider>
+    <hr>
     
         <section class="section">
             <h3>Veja como o Gestão Escolar otimiza o fluxo de trabalho</h3>
-            <h4>Com o recurso Gerar Documentos, o secretário escolar
-                pode criar em menos de um minuto, uma declaração que
+            <h4>Com o recurso Gerar Documentos o secretário escolar
+                pode criar, em menos de um minuto, uma declaração que
                 comprove que o Aluno está matriculado no 6º ano neste ano letivo.
             </h4>
         </section>
+
+    <hr>
+        
+        <section class="section">
+            <h3>Um novo recurso para agilizar diagnósticos pedagógicos</h3>
+            <h4>A nova funcionalidade permite escolher um aluno matriculado e criar
+                um relatório personalizado para encaminhar a outras instituições.
+            </h4>
+        </section>
     
-    <p-divider></p-divider>
+    <hr>
     
         <section class="section">
             <h3>Realize um período de teste de 30 dias e se o GE não contribuir significamente
@@ -49,49 +61,61 @@
                     <p-inputMask mask="(99) 99999-9999" [(ngModel)]="celular" placeholder="(99) 99999-9999"></p-inputMask>
                     <label for="celular">Contato</label>
                 </p-floatLabel>
+
+                <p-dropdown [options]="tipoInstituicao" [(ngModel)]="selectInstituicao" optionLabel="tipo" [showClear]="true" placeholder="Escolha o tipo de Instituição"></p-dropdown>
             </div>
 
-            <p-button class="botao" label="Solicitar análise"></p-button>
+            <p-button class="botao" label="Solicitar análise" (click)="enviaDados()"></p-button>
+
         </section>
-    
-    <p-divider></p-divider>
-    
+
     <footer>
     
-        <div class="footer">
+        <div class="divfooter">
             <h6>
                 Copyright© 2001-2024 FESV solutions. Todos os direitos reservados.
                 FESV SOLUCOES DO BRASIL LTDA. inscrita no CNPJ/MF sob o nº. 00.000.000/0001-10.
                 <br>
                 <br>
-                Esse website é melhor visualizado nas versões Microsoft Internet Explorer 11 ou superior e/ou nas últimas versões dos navegadores Google Chrome e Mozilla Firefox.
-                <br>
-                <br>
-                Formas de pagamento aceitas: Pix, Cartão de crédito e Débito (Bandeiras: Visa, MasterCard, Elo, American Express, Diners Club, Hipercard, Elo) e Boleto bancário.
+                Formas de pagamento aceitas: Pix, Cartão de crédito e débito e Boleto bancário.
             </h6>
-    
-            <h4>
-                Precisa de ajuda?
-                <h5>
-                    Entre em contato:
-                </h5>
-            </h4>
+            
+            <div>
+                <h4 style="text-align: center;">
+                    Precisa de ajuda?
+                </h4>
+                <p-button label="Falar com um atendente" [rounded]="true" severity="success"></p-button>
+            </div>
             
         </div>
         
-        <p-divider></p-divider>
+        <hr style="width: 88%">
     
-        <div class="footer">
+        <div class="divfooter">
             <h6 class="separador">
-                <a class="separador" routerLink="/tela-inicial">Política de Privacidade</a>
-                <a class="separador" routerLink="/tela-inicial">Política de vendas</a>
-                <a class="separador" routerLink="/tela-inicial">Avisos legais</a>
-                <a class="separador" routerLink="/tela-inicial">Mapa do Site</a>
+                <a class="separador" routerLink="/tela-inicial">Política de Privacidade &nbsp; </a>
+                <a class="separador" routerLink="/tela-inicial"> | Política de vendas &nbsp; </a>
+                <a class="separador" routerLink="/tela-inicial"> | Avisos legais &nbsp; </a>
+                <a class="separador" routerLink="/tela-inicial"> | Mapa do Site </a>
             </h6>
-    
-            <h5>
-                Nossas redes sociais:
-            </h5>
+            
+            <div>
+                <h5>
+                    Nossas redes sociais:
+                </h5>
+                <div class="logos">
+                    <a href="https://www.instagram.com">
+                        <img src="../../assets/img/instagram.svg" alt="instagram logo">
+                    </a>
+                    <a href="https://www.linkedin.com">
+                        <img src="../../assets/img/linkedin.svg" alt="instagram logo">
+                    </a>
+                    <a href="https://www.youtube.com">
+                        <img src="../../assets/img/youtube.svg" alt="YT logo">
+                    </a>
+                </div>   
+            </div>
+            
         </div>
     
     </footer>

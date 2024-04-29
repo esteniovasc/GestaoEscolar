@@ -1,2 +1,26 @@
 /* You can add global styles to this file, and also import other style files */
 @import "primeicons/primeicons.css";
+@import "primeflex/primeflex.css";
+
+html,body {
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+::-webkit-scrollbar {
+    background-color: #a8b6c2;
+    border-radius: 5px;
+    width: 15px;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #979797;
+    border-radius: 30px;
+}
+
+::-webkit-scrollbar-track {
+    background-color: #e0e2e3;
+    border-radius: 5px;
+}
+

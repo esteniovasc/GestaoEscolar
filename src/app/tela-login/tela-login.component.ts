@@ -8,4 +8,12 @@ import { Component } from '@angular/core';
 export class TelaLoginComponent {
   username: string | undefined;
   password!: string;
+  validacao: boolean = false;
+
+  validaEntrada(){
+    if (this.username=='admin' && this.password=='admin'){
+        this.validacao=true;
+    }
+  }
+
 }

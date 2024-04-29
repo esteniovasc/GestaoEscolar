@@ -2,15 +2,15 @@
 
     <h3>Área de Login</h3>   
 
-    <a routerLink="/tela-inicial" class="card flex justify-content-center">
-        <p-button label="Home" [raised]="true"></p-button>
+    <a routerLink="/" class="card flex justify-content-center">
+        <p-button label="Página inicial" [raised]="true"></p-button>
     </a>
 
 </header>
 
 <div class="container">
     
-    <p-button icon="pi pi-user" [rounded]="true" [text]="true" [raised]="true" severity="info "></p-button>
+    <p-button icon="pi pi-user" [rounded]="true" [text]="true" [raised]="true" severity="info"></p-button>
 
     <div class="card flex justify-content-center">
         <span class="p-float-label">
@@ -28,6 +28,11 @@
     
     <div class="card flex justify-content-center botao">
         <p-button class="botao" label="Esqueceu a senha?" [raised]="true" severity="warning"></p-button>
-        <p-button class="botao" label="Entrar" [raised]="true" ></p-button>
+        
+        <a routerLink='/tela-principal-GE'>
+            <p-button (click)="validaEntrada()" class="botao" label="Entrar" [raised]="true"></p-button>
+        </a>
+        
+        <!-- *ngIf="username && password === 'admin' "-->
     </div>
 </div>
