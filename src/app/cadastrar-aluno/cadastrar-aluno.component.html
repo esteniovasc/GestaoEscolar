@@ -1,0 +1,89 @@
+<header class="header">
+
+    <div class="espacamento">
+        <p-sidebar [(visible)]="sidebarVisible">
+            <h4>Todas as funcionalidades</h4>
+            <p>
+                Opções aqui
+            </p>
+        </p-sidebar>
+        <p-button (click)="sidebarVisible = true" icon="pi pi-list" severity="info" [raised]="true"></p-button>
+        <h4>Gestão Escolar v.2.0.24</h4>
+    </div>
+
+    <p-iconField iconPosition="left">
+        <p-inputIcon styleClass="pi pi-search" />
+        <input type="text" pInputText placeholder="Pesquisar função" />
+    </p-iconField>
+
+    <div class="espacamento">
+        <!--<p-avatar icon="pi pi-user" styleClass="mr-2" size="large"></p-avatar>-->
+        <h4>Francisco | 222.333.444-55</h4>
+
+        <div class="card flex justify-content-center">
+            <p-splitButton icon="pi pi-user" (click)="update()" [model]="items"
+                styleClass="p-button-raised p-button-rounded p-button-info mr-2 mb-2"></p-splitButton>
+        </div>
+    </div>
+
+</header>
+
+<div class="cartao">
+
+    <h2>Cadastrar aluno</h2>
+
+    <div class="dadosAluno">
+
+        <p-floatLabel>
+            <input id="nomeAluno" type="text" pInputText [(ngModel)]="nomeAluno" />
+            <label for="nomeAluno">Nome Completo</label>
+        </p-floatLabel>
+
+        <!-- class="p-inputtext-lg" -->
+
+        <p-floatLabel>
+            <p-inputMask mask="99/99/9999" [(ngModel)]="dataNascimento" placeholder="99/99/9999"></p-inputMask>
+            <label for="dataNascimento">Data de Nascimento</label>
+        </p-floatLabel>
+
+        <p-floatLabel>
+            <p-inputMask mask="999.999.999-99" [(ngModel)]="cpf" placeholder="999.999.999-99"></p-inputMask>
+            <label for="cpf">CPF</label>
+        </p-floatLabel>
+
+    </div>
+
+    <div class="dadosAluno">
+
+        <p-floatLabel>
+            <input id="nomeMae" type="text" pInputText [(ngModel)]="nomeMae" />
+            <label for="nomeMae">Nome da Mãe</label>
+        </p-floatLabel>
+
+        <p-floatLabel>
+            <input id="nomePai" type="text" pInputText [(ngModel)]="nomePai" />
+            <label for="nomePai">Nome do Pai</label>
+        </p-floatLabel>
+
+    </div>
+
+    <div class="dadosAluno">
+
+        <p-floatLabel>
+            <input id="endereco" type="text" pInputText [(ngModel)]="endereco" />
+            <label for="endereco">Endereço</label>
+        </p-floatLabel>
+
+        <p-floatLabel>
+            <p-inputMask mask="(99) 99999-9999" [(ngModel)]="phone" placeholder="(99) 99999-9999"></p-inputMask>
+            <label for="phone">Contato</label>
+        </p-floatLabel>
+
+    </div>
+
+    <div class="dadosAluno">
+        <p-button label="Limpar formulário" [outlined]="true" severity="danger"></p-button>
+        <p-button label="Enviar dados e cadastrar" severity="success" icon="pi pi-check" iconPos="right"></p-button>
+    </div>
+
+</div>

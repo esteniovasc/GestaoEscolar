@@ -1,3 +1,11 @@
+a {
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
 .header {
     background: rgb(56, 118, 29);
     display: flex;
@@ -38,6 +46,7 @@
 
     align-items: center;
     justify-content: center;
+
 }
 
 .grade2 {
@@ -64,6 +73,9 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
+
+    transition: .4s;
+    cursor: pointer;
     
 }
 
@@ -74,4 +86,17 @@
 
 .cartao h4 {
     margin: 5px;
+    color: black;
+}
+
+/* .grade:hover > :not(:hover){
+    transform: scale(0.98);
+}
+
+.grade2:hover > :not(:hover){
+    transform: scale(0.98);
+} */
+
+.cartao:hover {
+    transform: scale(1.05);
 }

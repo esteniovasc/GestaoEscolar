@@ -30,13 +30,15 @@ import { TelaInicialComponent } from './tela-inicial/tela-inicial.component';
 import { FormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
 import { TelaPrincipalGEComponent } from './tela-principal-GE/tela-principal-GE.component';
+import { CadastrarAlunoComponent } from './cadastrar-aluno/cadastrar-aluno.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     TelaLoginComponent,
     TelaInicialComponent,
-    TelaPrincipalGEComponent
+    TelaPrincipalGEComponent,
+    CadastrarAlunoComponent
   ],
   imports: [
     BrowserModule,
@@ -63,7 +65,8 @@ import { TelaPrincipalGEComponent } from './tela-principal-GE/tela-principal-GE.
     RouterModule.forRoot([
       {path: '', component: TelaInicialComponent},
       {path: 'tela-login', component: TelaLoginComponent},
-      {path: 'tela-principal-GE', component: TelaPrincipalGEComponent}
+      {path: 'tela-principal-GE', component: TelaPrincipalGEComponent},
+      {path: 'cadastrar-aluno', component: CadastrarAlunoComponent}
     ])
   ],
   providers: [],

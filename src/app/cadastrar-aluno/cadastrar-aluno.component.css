@@ -1,0 +1,63 @@
+.header {
+    background: rgb(56, 118, 29);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+    padding-top: 15px;
+    padding-left: 25px;
+    padding-right: 25px;
+    padding-bottom: 10px;
+    box-shadow: 0px 5px 15px -5px #303030;
+}
+
+.espacamento{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+}
+
+.cartao {
+
+    margin: 25px;
+    padding: 20px;
+    padding-top: 5px;
+    margin-bottom: 25px;
+
+    background-color: #ffffff;
+
+    min-height: 400px;
+    max-width: 100%;
+
+    border-radius: 10px;
+    box-shadow: 0px 1px 15px #b4b4b4;
+        
+}
+
+.informacoes {
+    padding-top: 1px;
+    padding-left: 25px;
+}
+
+.dadosAluno{
+    display: flex;
+    flex-direction: row;
+    margin: 15px;
+    margin-top: 35px;
+    gap: 20px;
+}
+
+.grade {
+    margin: 20px;
+    gap: 15px;
+
+    display: grid;
+    grid-template-columns: 4fr 2fr 2fr 4fr;
+
+    align-items: center;
+    justify-content: center;
+
+}
