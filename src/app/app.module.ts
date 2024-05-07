@@ -33,6 +33,8 @@ import { RouterModule } from '@angular/router';
 import { TelaPrincipalGEComponent } from './tela-principal-GE/tela-principal-GE.component';
 import { CadastrarAlunoComponent } from './cadastrar-aluno/cadastrar-aluno.component';
 import { NavBarGEComponent } from './nav-bar-ge/nav-bar-ge.component';
+import { LoginService } from './tela-login/login.service';
+import { HttpClient, HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -66,6 +68,7 @@ import { NavBarGEComponent } from './nav-bar-ge/nav-bar-ge.component';
     SplitButtonModule,
     ToastModule,
     ReactiveFormsModule,
+    HttpClientModule,
     RouterModule.forRoot([
       {path: '', component: TelaInicialComponent},
       {path: 'tela-login', component: TelaLoginComponent},

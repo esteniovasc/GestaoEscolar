@@ -1,6 +1,7 @@
-import { Component } from '@angular/core';
-
+import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { LoginService } from './login.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-tela-login',
@@ -8,14 +9,15 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
   styleUrl: './tela-login.component.css'
 })
 
-export class TelaLoginComponent {
-  username: string | undefined;
-  password!: string;
-  validacao: boolean = false;
+export class TelaLoginComponent implements OnInit {
+
+  ngOnInit(): void {
+      
+  }
 
   public formLogin:FormGroup;
 
-  constructor(private fb:FormBuilder){
+  constructor(private fb:FormBuilder, private loginService:LoginService, private route:Router){
     this.formLogin = this.criarFormLogin();
   }
 
@@ -28,6 +30,20 @@ export class TelaLoginComponent {
 
   public isFormControlInvalid(controlName:string):boolean{
     return !!(this.formLogin.get(controlName)?.invalid && this.formLogin.get(controlName)?.touched)
+  }
+
+  public submitForm(){
+    const {username, password} = this.formLogin.value;
+    this.formLogin.reset();
+
+    this.loginService.login(username, password).subscribe(
+      res => {
+        this.route.navigate(['/tela-principal-GE']);
+      },
+      err =>{
+        this.route.navigate(['/tela-principal-GE']);
+      }
+    )
   }
 
 }
