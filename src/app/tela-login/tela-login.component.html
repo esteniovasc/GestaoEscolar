@@ -9,30 +9,58 @@
 </header>
 
 <div class="container">
-    
-    <p-button icon="pi pi-user" [rounded]="true" [text]="true" [raised]="true" severity="info"></p-button>
 
-    <div class="card flex justify-content-center">
-        <span class="p-float-label">
-            <input pInputText id="username" [(ngModel)]="username" />
+    <form [formGroup]="formLogin" class="container">
+
+        <p-button icon="pi pi-user" [rounded]="true" [text]="true" [raised]="true" severity="info"></p-button>
+
+        <!-- <div class="card flex justify-content-center">
+            <span class="p-float-label">
+                <input pInputText id="username" aria-describedby="username-help" [(ngModel)]="username" class="form-control" formControlName="username" />
+                <label for="username">Usuário</label>
+            </span>
+        </div>
+
+        <div class="card flex justify-content-center">
+            <span class="p-float-label">
+                <p-password [(ngModel)]="password" [feedback]="false" class="form-control" formControlName="password"></p-password>
+                <label for="password">Senha</label>
+            </span> 
+        </div> -->
+
+        <div class="flex flex-column gap-2">
             <label for="username">Usuário</label>
-        </span>
-    </div>
-    
-    <div class="card flex justify-content-center">
-        <span class="p-float-label">
-            <p-password [(ngModel)]="password" [feedback]="false"></p-password>
-            <label for="password">Senha</label>
-        </span>
-    </div>
-    
-    <div class="card flex justify-content-center botao">
-        <p-button class="botao" label="Esqueceu a senha?" [raised]="true" severity="warning"></p-button>
+            <input 
+                pInputText 
+                id="username" 
+                aria-describedby="username-help" 
+                [(ngModel)]="username" 
+                class="form-control" formControlName="username"/>
+            <div *ngIf="isFormControlInvalid('username')" id="username-help" style="color: rgb(192, 26, 26);">
+                Mínimo de 5 caracteres.
+            </div>
+        </div>
+
+        <div class="flex flex-column gap-2">
+            <label for="username">Senha</label>
+            <input 
+                pInputText 
+                id="password" 
+                aria-describedby="password-help" 
+                [(ngModel)]="password" 
+                class="form-control" formControlName="password"/>
+            <div *ngIf="isFormControlInvalid('password')" id="password-help" style="color: rgb(192, 26, 26);">
+                Mínimo de 6 caracteres.
+            </div>
+        </div>
         
-        <a routerLink='/tela-principal-GE'>
-            <p-button (click)="validaEntrada()" class="botao" label="Entrar" [raised]="true"></p-button>
-        </a>
-        
-        <!-- *ngIf="username && password === 'admin' "-->
-    </div>
+        <div class="card flex justify-content-center botao">
+            <p-button class="botao" label="Esqueceu a senha?" [raised]="true" severity="warning"></p-button>
+            <p-button class="botao" label="Entrar" [raised]="true" [disabled]="!formLogin.valid" routerLink="/tela-principal-GE"></p-button>
+            
+            <!-- *ngIf="username && password === 'admin' "-->
+        </div>
+
+    </form>
+    
 </div>

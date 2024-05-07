@@ -3,6 +3,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { ButtonModule } from 'primeng/button';
 import { MessagesModule } from 'primeng/messages'; 
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations'; 
+import { ReactiveFormsModule } from '@angular/forms';
 
 import { DividerModule } from 'primeng/divider';
 import { ScrollTopModule } from 'primeng/scrolltop';
@@ -31,6 +32,7 @@ import { FormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
 import { TelaPrincipalGEComponent } from './tela-principal-GE/tela-principal-GE.component';
 import { CadastrarAlunoComponent } from './cadastrar-aluno/cadastrar-aluno.component';
+import { NavBarGEComponent } from './nav-bar-ge/nav-bar-ge.component';
 
 @NgModule({
   declarations: [
@@ -38,7 +40,8 @@ import { CadastrarAlunoComponent } from './cadastrar-aluno/cadastrar-aluno.compo
     TelaLoginComponent,
     TelaInicialComponent,
     TelaPrincipalGEComponent,
-    CadastrarAlunoComponent
+    CadastrarAlunoComponent,
+    NavBarGEComponent
   ],
   imports: [
     BrowserModule,
@@ -62,6 +65,7 @@ import { CadastrarAlunoComponent } from './cadastrar-aluno/cadastrar-aluno.compo
     SidebarModule,
     SplitButtonModule,
     ToastModule,
+    ReactiveFormsModule,
     RouterModule.forRoot([
       {path: '', component: TelaInicialComponent},
       {path: 'tela-login', component: TelaLoginComponent},

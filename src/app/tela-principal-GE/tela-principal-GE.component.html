@@ -1,32 +1,4 @@
-<header class="header">
-
-    <div class="espacamento">
-        <p-sidebar [(visible)]="sidebarVisible">
-            <h4>Todas as funcionalidades</h4>
-            <p>
-                Opções aqui
-            </p>
-        </p-sidebar>
-        <p-button (click)="sidebarVisible = true" icon="pi pi-list" severity="info" [raised]="true"></p-button>
-        <h4>Gestão Escolar v.2.0.24</h4>
-    </div>
-
-    <p-iconField iconPosition="left">
-        <p-inputIcon styleClass="pi pi-search" />
-        <input type="text" pInputText placeholder="Pesquisar função" />
-    </p-iconField>
-
-    <div class="espacamento">
-        <!--<p-avatar icon="pi pi-user" styleClass="mr-2" size="large"></p-avatar>-->
-        <h4>Francisco | 222.333.444-55</h4>
-
-        <div class="card flex justify-content-center">
-            <p-splitButton icon="pi pi-user" (click)="update()" [model]="items"
-                styleClass="p-button-raised p-button-rounded p-button-info mr-2 mb-2"></p-splitButton>
-        </div>
-    </div>
-
-</header>
+<app-nav-bar-ge></app-nav-bar-ge>
 
 <section class="grade">
 
@@ -36,7 +8,7 @@
         <h4>Gráficos e Desempenho</h4>
 
     </div>
-
+    
     <div class="cartao">
 
         <img src="../../assets/img/calendario.png" alt="">
@@ -44,12 +16,10 @@
 
     </div>
 
-    <div class="cartao">
+    <div class="cartao" routerLink="/cadastrar-aluno">
 
-        <a routerLink="/cadastrar-aluno">
-            <img src="../../assets/img/adicionaraluno.png" alt="">
-            <h4>Cadastrar aluno</h4>
-        </a>
+        <img src="../../assets/img/adicionaraluno.png" alt="">
+        <h4>Cadastrar aluno</h4>
 
     </div>
 

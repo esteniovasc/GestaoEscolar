@@ -6,28 +6,6 @@ a {
     justify-content: center;
 }
 
-.header {
-    background: rgb(56, 118, 29);
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    align-items: center;
-    color: white;
-    padding-top: 15px;
-    padding-left: 25px;
-    padding-right: 25px;
-    padding-bottom: 10px;
-    box-shadow: 0px 5px 15px -5px #303030;
-}
-
-.espacamento{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    gap: 15px;
-}
-
 .funcionalidades {
     display: flex;
     flex-direction: row;
