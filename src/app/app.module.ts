@@ -35,6 +35,7 @@ import { CadastrarAlunoComponent } from './cadastrar-aluno/cadastrar-aluno.compo
 import { NavBarGEComponent } from './nav-bar-ge/nav-bar-ge.component';
 import { LoginService } from './tela-login/login.service';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
+import { PesquisarAlunoComponent } from './pesquisar-aluno/pesquisar-aluno.component';
 
 @NgModule({
   declarations: [
@@ -43,7 +44,8 @@ import { HttpClient, HttpClientModule } from '@angular/common/http';
     TelaInicialComponent,
     TelaPrincipalGEComponent,
     CadastrarAlunoComponent,
-    NavBarGEComponent
+    NavBarGEComponent,
+    PesquisarAlunoComponent
   ],
   imports: [
     BrowserModule,
@@ -73,7 +75,8 @@ import { HttpClient, HttpClientModule } from '@angular/common/http';
       {path: '', component: TelaInicialComponent},
       {path: 'tela-login', component: TelaLoginComponent},
       {path: 'tela-principal-GE', component: TelaPrincipalGEComponent},
-      {path: 'cadastrar-aluno', component: CadastrarAlunoComponent}
+      {path: 'cadastrar-aluno', component: CadastrarAlunoComponent},
+      {path: 'pesquisar-aluno', component: PesquisarAlunoComponent},
     ])
   ],
   providers: [],

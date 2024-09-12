@@ -1,0 +1,31 @@
+<app-nav-bar-ge></app-nav-bar-ge>
+
+<div class="cartao">
+
+    <h2>Pesquisar aluno por ID</h2>
+
+    <div class="dadosAluno">
+
+        <p-floatLabel>
+            <input id="idAluno" type="number" pInputText [(ngModel)]="idAluno" />
+            <label for="idAluno">ID do Aluno</label>
+        </p-floatLabel>
+
+        <p-button label="Procurar" (click)="getStudent()" severity="success" icon="pi pi-check" iconPos="right"></p-button>
+
+        <!-- class="p-inputtext-lg" -->
+
+        <div *ngIf="student">
+            <h3>Estudante Encontrado:</h3>
+            <p>ID: {{student.id}}</p>
+            <p>Nome: {{student.name}}</p>
+            <p>Turma: {{student.turma}}</p>
+        </div>
+        
+        <div *ngIf="errorMessage">
+            <p style="color:red">{{errorMessage}}</p>
+        </div>
+
+    </div>
+</div>
+    
