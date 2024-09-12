@@ -1,4 +1,4 @@
-# Gestão Escolar
+# Gestão Escolar - GE (alpha version)
 
 Este é um projeto de front-end pensado nas necessidades um ambiente escolar.
 
@@ -10,4 +10,4 @@ O projeto foi criado utilizando o --no-standalone (essa informação pode ser ú
 
 Depois de baixar o repositório, abra com sua IDE e dê um ng serve (se não funcionar, eu não sei o que é, pois, na minha máquina roda :D).
 
-(https://i.ibb.co/8shN5Zj/Captura-de-tela-2024-09-12-190334.png)
+![Tela inicial ](https://i.ibb.co/8shN5Zj/Captura-de-tela-2024-09-12-190334.png)
